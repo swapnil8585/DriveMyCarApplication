@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.AddCarActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="?android:actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin10"
+                android:layout_marginTop="@dimen/margin10"
+                android:layout_marginEnd="@dimen/margin10"
+                android:background="@drawable/edit_background"
+                android:hint="Car Brand">
+
+                <EditText
+                    android:id="@+id/car_brand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:inputType="textPersonName"
+                    android:padding="@dimen/padding10"
+                    android:textColor="@color/colorBlack" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin10"
+                android:layout_marginTop="@dimen/margin10"
+                android:layout_marginEnd="@dimen/margin10"
+                android:background="@drawable/edit_background"
+                android:hint="Model">
+
+                <EditText
+                    android:id="@+id/car_model"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:inputType="textPersonName"
+                    android:padding="@dimen/padding10"
+                    android:textColor="@color/colorBlack" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin10"
+                android:layout_marginTop="@dimen/margin10"
+                android:layout_marginEnd="@dimen/margin10"
+                android:background="@drawable/edit_background"
+                android:hint="Registration Number">
+
+                <EditText
+                    android:id="@+id/car_reg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:inputType="textPersonName"
+                    android:padding="@dimen/padding10"
+                    android:textColor="@color/colorBlack" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin10"
+                android:layout_marginTop="@dimen/margin10"
+                android:layout_marginEnd="@dimen/margin10"
+                android:background="@drawable/edit_background"
+                android:hint="Chasis Number">
+
+                <EditText
+                    android:id="@+id/car_chasis_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:inputType="textPersonName"
+                    android:padding="@dimen/padding10"
+                    android:textColor="@color/colorBlack" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin10"
+                android:layout_marginTop="@dimen/margin10"
+                android:layout_marginEnd="@dimen/margin10"
+                android:background="@drawable/edit_background"
+                android:hint="Year">
+
+                <EditText
+                    android:id="@+id/car_year"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:inputType="textPersonName"
+                    android:padding="@dimen/padding10"
+                    android:textColor="@color/colorBlack" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Spinner
+                android:id="@+id/car_model_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin10"
+                android:layout_marginTop="@dimen/margin10"
+                android:layout_marginEnd="@dimen/margin10"
+                android:background="@drawable/edit_background"
+                android:entries="@array/Car_Type"
+                android:padding="@dimen/padding10" />
+
+            <Spinner
+                android:id="@+id/car_trans_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin10"
+                android:layout_marginTop="@dimen/margin10"
+                android:layout_marginEnd="@dimen/margin10"
+                android:background="@drawable/edit_background"
+                android:entries="@array/Transmission_Type"
+                android:padding="@dimen/padding10" />
+
+            <Spinner
+                android:id="@+id/car_fuel_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin10"
+                android:layout_marginTop="@dimen/margin10"
+                android:layout_marginEnd="@dimen/margin10"
+                android:background="@drawable/edit_background"
+                android:entries="@array/Fuel_Type"
+                android:padding="@dimen/padding10" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/car_add_car"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin10"
+        android:layout_marginEnd="@dimen/margin10"
+        android:layout_marginBottom="@dimen/margin5"
+        android:background="@color/colorButton"
+        android:gravity="center"
+        android:text="Add Car"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/size19"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/colorNotWorking" />
+        </shape>
+    </item>
+
+    <item
+        android:bottom="@dimen/margin20"
+        android:left="@dimen/margin20"
+        android:right="@dimen/margin20"
+        android:top="@dimen/margin20">
+        <bitmap
+            android:src="@drawable/ic_icon_cancel"
+            android:tint="@color/colorBlack" />
+    </item>
+</layer-list>

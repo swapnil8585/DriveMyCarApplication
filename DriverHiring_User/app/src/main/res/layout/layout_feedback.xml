@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Ride Complete"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/size24" />
+
+        <TextView
+            android:id="@+id/feedbackMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="@dimen/size17" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/feedbackDriverImage"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/margin10"
+            android:layout_marginTop="@dimen/margin10" />
+
+        <TextView
+            android:id="@+id/feedbackDriverName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Driver Name"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/size21" />
+
+        <RatingBar
+            android:id="@+id/feedbackRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/margin5"
+            android:layout_marginTop="@dimen/margin5"
+            android:isIndicator="false"
+            android:scaleX="0.8"
+            android:scaleY="0.8" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin5"
+            android:layout_marginLeft="@dimen/margin10"
+            android:layout_marginRight="@dimen/margin10"
+            android:layout_marginTop="@dimen/margin5"
+            app:cardBackgroundColor="@color/colorWhite"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp">
+
+            <EditText
+                android:id="@+id/feedbackText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_background"
+                android:drawableLeft="@drawable/ic_icon_email"
+                android:ems="10"
+                android:hint="Feedback"
+                android:inputType="textPersonName"
+                android:padding="@dimen/padding10"
+                android:singleLine="true" />
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btnFeedSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin40"
+            android:background="@color/colorButton"
+            android:paddingEnd="@dimen/padding20"
+            android:paddingStart="@dimen/padding20"
+            android:text="Submit Feedback"
+            android:textColor="@color/colorWhite" />
+
+
+        <TextView
+            android:id="@+id/btnFeedSkip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin40"
+            android:padding="@dimen/padding5"
+            android:text="Skip Feedback"
+            android:textColor="@color/colorBlackLight"
+            android:textSize="@dimen/size17" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

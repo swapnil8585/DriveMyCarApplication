@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/image_login"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="center"
+            android:src="@mipmap/ic_launcher_round" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_login"
+            android:layout_marginTop="@dimen/margin10"
+            android:layout_marginBottom="@dimen/margin20"
+            android:gravity="center"
+            android:text="@string/title"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/size21"
+            android:typeface="serif" />
+
+        <!--Email Id-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin10"
+            android:layout_marginTop="@dimen/margin10"
+            android:layout_marginRight="@dimen/margin10"
+            app:cardBackgroundColor="@color/colorWhite"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp">
+
+            <EditText
+                android:id="@+id/userid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_background"
+                android:drawableLeft="@drawable/ic_icon_email"
+                android:ems="10"
+                android:hint="User ID"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:singleLine="true" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!--Email Id-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin10"
+            android:layout_marginTop="@dimen/margin15"
+            android:layout_marginRight="@dimen/margin10"
+            app:cardBackgroundColor="@color/colorWhite"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp">
+
+            <EditText
+                android:id="@+id/pass"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/edit_background"
+                android:drawableLeft="@drawable/ic_icon_pass"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:singleLine="true" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin20"
+            android:layout_marginTop="@dimen/margin40"
+            android:layout_marginRight="@dimen/margin20"
+            android:text="Log In"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white"
+            android:typeface="serif"
+            app:backgroundTint="@color/colorButton" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginTop="@dimen/margin60"
+        android:gravity="center"
+        android:text="@string/messagelogin"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/size17"
+        android:typeface="serif" />
+
+
+</RelativeLayout>

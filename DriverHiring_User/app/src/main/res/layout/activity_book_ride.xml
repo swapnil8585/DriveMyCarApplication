@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.BookRideActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin5"
+            android:layout_marginTop="@dimen/margin5"
+            android:layout_marginRight="@dimen/margin5"
+            app:cardBackgroundColor="@color/colorWhite"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Spinner
+                    android:id="@+id/ride_cars"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin10"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:layout_marginEnd="@dimen/margin10"
+                    android:background="@drawable/edit_background" />
+
+                <TextView
+                    android:id="@+id/ride_place_types"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin10"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:layout_marginEnd="@dimen/margin10"
+                    android:background="@drawable/edit_background"
+                    android:padding="@dimen/padding10"
+                    android:textColor="@color/colorBlack"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin10"
+                    android:layout_marginTop="@dimen/margin15"
+                    android:layout_marginEnd="@dimen/margin10"
+                    android:layout_marginBottom="@dimen/margin10"
+                    android:background="@drawable/edit_background"
+                    android:hint="Number of Days">
+
+                    <EditText
+                        android:id="@+id/ride_days"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/margin5"
+                        android:layout_marginEnd="@dimen/margin5"
+                        android:layout_marginBottom="@dimen/margin5"
+                        android:background="@android:color/transparent"
+                        android:inputType="number"
+                        android:padding="@dimen/padding5"
+                        android:singleLine="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/search_drivers"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/margin5"
+                    android:layout_marginEnd="@dimen/margin5"
+                    android:layout_marginBottom="@dimen/margin5"
+                    android:text="Search Driver"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/size17"
+                    app:backgroundTint="@color/colorButton" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <include
+            layout="@layout/fragment_past_trips"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/margin5"
+            android:layout_marginTop="@dimen/margin5"
+            android:layout_marginRight="@dimen/margin5"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

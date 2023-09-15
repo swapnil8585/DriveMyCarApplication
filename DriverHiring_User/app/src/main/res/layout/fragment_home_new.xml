@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background3">
+
+    <TextView
+        android:id="@+id/home_no_rides"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:drawableEnd="@drawable/ic_icon_arrow"
+        android:fontFamily="serif"
+        android:padding="@dimen/padding20"
+        android:text="You don't have any rides booked for today"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/size17"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/home_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin10"
+        android:layout_marginTop="@dimen/margin30"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home_no_rides">
+
+        <TextView
+            android:id="@+id/home_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome, User Name"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/size21"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin20"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/size21"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/home_book_ride"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="@dimen/margin20"
+        android:background="@drawable/home_background"
+        android:gravity="center"
+        android:padding="@dimen/padding10"
+        android:text="Book a Ride"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/size19"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/current_rides"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/current_rides"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin10"
+        android:layout_marginEnd="@dimen/margin10"
+        android:layout_marginBottom="@dimen/margin10"
+        android:visibility="gone"
+        app:cardBackgroundColor="@color/colorWhite"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin4"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Current Trip"
+                android:textAllCaps="true"
+                android:textColor="@color/colorButton"
+                android:textSize="@dimen/size21"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorUnselected"
+                android:padding="@dimen/padding10">
+
+                <TextView
+                    android:id="@+id/current_trip_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/current_trip_cost"
+                    android:gravity="center|left"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/size21"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/current_trip_cost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/size21"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/current_trip_dist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/current_trip_cost"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/size17"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin10"
+                android:hint="PICK UP">
+
+                <EditText
+                    android:id="@+id/current_trip_src"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:inputType="textPostalAddress"
+                    android:padding="@dimen/padding10"
+                    android:text=""
+                    android:textColor="@color/colorBlack" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin10"
+                android:layout_marginRight="@dimen/margin10"
+                android:layout_marginBottom="@dimen/margin10"
+                android:hint="DROP OFF">
+
+                <EditText
+                    android:id="@+id/current_trip_dest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:inputType="textPostalAddress"
+                    android:padding="@dimen/padding10"
+                    android:text=""
+                    android:textColor="@color/colorBlack" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/show_current_ride"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/margin10"
+                android:layout_marginBottom="@dimen/margin10"
+                android:drawableEnd="@drawable/ic_icon_next"
+                android:padding="@dimen/padding5"
+                android:text="Show Ride"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/size17"
+                app:backgroundTint="@color/colorButton"
+                app:drawableTint="@color/colorWhite" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

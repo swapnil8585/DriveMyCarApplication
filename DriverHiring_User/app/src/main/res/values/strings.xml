@@ -1,0 +1,94 @@
+<resources>
+    <string name="app_name">Driver Hiring_User</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title">Welcome \n Login to Continue</string>
+
+    <string name="title_reg">Welcome Aboard\n Sign Up in Simple Steps</string>
+    <string name="messagelogin">New User, Click Here to Register</string>
+    <string name="messageReg">Already a User? Login Now</string>
+    <string name="title_activity_cab_navigation">CabNavigationActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_logout">Logout</string>
+    <string name="cab_desc">Cab Description</string>
+    <string name="currency">₹</string>
+    <string name="change_password">Change Password</string>
+    <string name="old_pass">Old Password</string>
+    <string name="new_pass">New Password</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <integer name="config_slide_up">250</integer>
+    <integer name="config_slide_down">200</integer>
+
+    <string name="feedhint">Rate your last ride with</string>
+    <string name="channel_name">Cab Booking</string>
+
+    <string name="channel_description">Notify User About Cab Confirmation, Cab Cancel etc</string>
+    <string name="document_load_error">No Documents found.</string>
+
+    <string-array name="Edit_Validation">
+        <item>Please Enter Name</item>
+        <item>Please Enter Contact</item>
+        <item>Please Enter valid contact</item>
+        <item>Please Enter Email</item>
+        <item>Please Enter valid email</item>
+        <item>Please Choose Date of Birth</item>
+        <item>Please Enter your Address</item>
+        <item>Please Enter City</item>
+        <item>Please Enter State</item>
+        <item>Please Enter Pincode</item>
+        <item>Please Enter a password</item>
+    </string-array>
+
+    <string-array name="Car_Type">
+        <item>Choose Type of Car</item>
+        <item>Hatchback</item>
+        <item>Sedan</item>
+        <item>Luxury Sedan</item>
+        <item>Coupe</item>
+        <item>Sports Car</item>
+        <item>MUV</item>
+        <item>SUV</item>
+        <item>MPV</item>
+        <item>Crossover</item>
+        <item>Pick-Up Truck</item>
+        <item>Mini Van</item>
+        <item>Van</item>
+    </string-array>
+
+    <string-array name="Fuel_Type">
+        <item>Choose Fuel Type</item>
+        <item>Petrol</item>
+        <item>Diesel</item>
+        <item>CNG</item>
+    </string-array>
+
+
+    <string-array name="Transmission_Type">
+        <item>Choose Transmission</item>
+        <item>Automatic</item>
+        <item>Manual</item>
+    </string-array>
+
+    <string-array name="trips_type">
+        <item>High Pass Roads</item>
+        <item>Mountain Ranges</item>
+        <item>Hill Station</item>
+        <item>Night Driving</item>
+        <item>Long Higways</item>
+        <item>Off-Roading</item>
+        <item>Snow road</item>
+    </string-array>
+
+    <string name="notification_title">Cab Hiring</string>
+    <string name="notification_message">Notification Service is running.</string>
+
+    <string name="exp_load_error">No Experience Details Found</string>
+
+</resources>

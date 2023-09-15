@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin5"
+        app:cardBackgroundColor="@color/colorWhite"
+        app:cardCornerRadius="@dimen/cardCorner"
+        app:cardElevation="@dimen/cardElevation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin5"
+                android:fontFamily="sans-serif"
+                android:padding="@dimen/padding5"
+                android:text="User Name"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/size21"
+                android:textStyle="normal"
+                android:visibility="gone" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/linear1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="@dimen/image_height"
+                            android:layout_height="@dimen/image_height"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/margin3"
+                            android:src="@drawable/ic_icon_location" />
+
+                        <TextView
+                            android:id="@+id/trip_source"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:ellipsize="end"
+                            android:gravity="center|left"
+                            android:maxLines="1"
+                            android:text="Source"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/size19" />
+
+                    </TableRow>
+
+                    <TextView
+                        android:layout_width="2dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin20"
+                        android:background="@drawable/dash" />
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="@dimen/image_height"
+                            android:layout_height="@dimen/image_height"
+                            android:layout_margin="@dimen/margin3"
+                            android:src="@drawable/ic_icon_dest"
+                            android:tint="@color/colorButton" />
+
+                        <TextView
+                            android:id="@+id/trip_destination"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:ellipsize="end"
+                            android:gravity="center|left"
+                            android:maxLines="1"
+                            android:text="Destination"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/size19" />
+
+                    </TableRow>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin5"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/trip_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/margin5"
+                        android:gravity="center|end"
+                        android:text="01 May 2019"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/size19" />
+
+                    <RatingBar
+                        android:id="@+id/trip_rating"
+                        style="@style/customRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="@dimen/margin5"
+                        android:numStars="5" />
+
+                    <TextView
+                        android:id="@+id/trip_cost"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="@dimen/margin5"
+                        android:gravity="center|end"
+                        android:text="$9999"
+                        android:textSize="@dimen/size19" />
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <TextView
+                android:id="@+id/trip_staus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorButton"
+                android:paddingStart="@dimen/padding10"
+                android:text="Status"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/size21"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin5"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/item_start_trip"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin10"
+                    android:background="@color/colorSteelBlue"
+                    android:padding="@dimen/padding5"
+                    android:text="Start Trip"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/size17"
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/item_cancel_trip"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"
+                    android:padding="@dimen/padding5"
+                    android:text="Cancel Trip"
+                    android:textColor="@color/colorSteelBlue"
+                    android:textSize="@dimen/size17"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

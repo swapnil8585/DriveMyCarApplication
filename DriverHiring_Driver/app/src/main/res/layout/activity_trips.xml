@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TripsActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin5"
+        app:cardBackgroundColor="@color/colorWhite"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/edit_background"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin10"
+                        android:layout_marginTop="@dimen/margin5"
+                        android:layout_marginEnd="@dimen/margin10"
+                        android:hint="Customer Name">
+
+                        <EditText
+                            android:id="@+id/rides_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:inputType="textPersonName"
+                            android:padding="@dimen/padding8"
+                            android:text=""
+                            android:textColor="@color/colorBlack" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin10"
+                        android:layout_marginTop="@dimen/margin5"
+                        android:layout_marginEnd="@dimen/margin10"
+                        android:hint="Source Address">
+
+                        <EditText
+                            android:id="@+id/rides_src"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:inputType="textPersonName"
+                            android:padding="@dimen/padding8"
+                            android:text=""
+                            android:textColor="@color/colorBlack" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin10"
+                        android:layout_marginTop="@dimen/margin5"
+                        android:layout_marginEnd="@dimen/margin10"
+                        android:hint="Destination Address">
+
+                        <EditText
+                            android:id="@+id/rides_dest"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:inputType="textPersonName"
+                            android:padding="@dimen/padding8"
+                            android:text=""
+                            android:textColor="@color/colorBlack" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin10"
+                        android:layout_marginTop="@dimen/margin5"
+                        android:layout_marginEnd="@dimen/margin10"
+                        android:hint="Place Type">
+
+                        <EditText
+                            android:id="@+id/rides_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:inputType="textPersonName"
+                            android:padding="@dimen/padding8"
+                            android:text=""
+                            android:textColor="@color/colorBlack" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--Start And End Date-->
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin10"
+                        android:layout_marginTop="@dimen/margin5"
+                        android:layout_marginEnd="@dimen/margin10">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="Start Date :">
+
+                            <EditText
+                                android:id="@+id/rides_s_date"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:enabled="false"
+                                android:inputType="textPersonName"
+                                android:padding="@dimen/padding5"
+                                android:text=""
+                                android:textColor="@color/colorBlack" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="End Date :">
+
+                            <EditText
+                                android:id="@+id/rides_e_date"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:enabled="false"
+                                android:inputType="textPersonName"
+                                android:padding="@dimen/padding5"
+                                android:text=""
+                                android:textColor="@color/colorBlack" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </TableRow>
+
+                    <!--Total Cost And Total Hours-->
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin10"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:layout_marginEnd="@dimen/margin10">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="Total Days">
+
+                            <EditText
+                                android:id="@+id/rides_tot_days"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:enabled="false"
+                                android:inputType="textPersonName"
+                                android:padding="@dimen/padding10"
+                                android:text=""
+                                android:textColor="@color/colorBlack" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="Total Hrs">
+
+                            <EditText
+                                android:id="@+id/rides_tot_hrs"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:enabled="false"
+                                android:inputType="textPersonName"
+                                android:padding="@dimen/padding10"
+                                android:text=""
+                                android:textColor="@color/colorBlack" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </TableRow>
+
+                    <RatingBar
+                        android:id="@+id/rides_cab_rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin10"
+                        android:layout_marginTop="@dimen/margin5"
+                        android:layout_marginEnd="@dimen/margin10"
+                        android:numStars="5"
+                        android:stepSize="1" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin10"
+                android:layout_marginBottom="@dimen/margin10"
+                android:background="@color/colorBlack"
+
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <include
+                    layout="@layout/activity_maps"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/margin10"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:layout_marginEnd="@dimen/margin10"
+                    android:layout_marginBottom="@dimen/margin10"
+                    android:layout_weight="1" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin10"
+                    android:layout_marginEnd="@dimen/margin10"
+                    android:layout_marginBottom="@dimen/margin10"
+                    >
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/rides_cab_details"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableEnd="@drawable/ic_icon_next"
+                        android:text="Show Cab Details"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@android:color/white"
+                        android:typeface="serif"
+                        app:backgroundTint="@color/colorButton"
+                        app:drawableTint="@color/colorWhite" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/rides_cab_start"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableEnd="@drawable/ic_icon_next"
+                        android:text="Start this Ride"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@android:color/white"
+                        android:typeface="serif"
+                        android:visibility="gone"
+                        app:backgroundTint="@color/colorButton"
+                        app:drawableTint="@color/colorWhite" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/rides_cab_finish"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableEnd="@drawable/ic_icon_next"
+                        android:text="Finish this Ride"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@android:color/white"
+                        android:typeface="serif"
+                        android:visibility="gone"
+                        app:backgroundTint="@color/colorButton"
+                        app:drawableTint="@color/colorWhite" />
+
+                </TableRow>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/pastDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding5"
+        android:text="Date : 26/10/1994"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/size19"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:gravity="center"
+        android:layout_margin="@dimen/margin5"
+        android:textStyle="bold"
+        />
+
+    <ListView
+        android:id="@+id/past_trips"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="@dimen/divider_height"
+        android:scrollbars="none"
+        android:layout_below="@id/pastDate"
+        android:visibility="visible"
+        />
+
+    <TextView
+        android:id="@+id/text_past_trips"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/pastDate"
+        android:background="@color/colorWhite"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:textSize="@dimen/size19"
+        android:visibility="gone" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/margin20"
+        app:fabSize="normal"
+        app:srcCompat="@drawable/ic_icon_add"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>

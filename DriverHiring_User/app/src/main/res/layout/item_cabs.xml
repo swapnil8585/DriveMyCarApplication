@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_item_holder"
+    android:layout_width="120dp"
+    android:layout_height="150dp"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/margin5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/item_cab_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/background_cab_type"
+            android:layout_marginTop="@dimen/margin10"
+            android:layout_marginLeft="@dimen/margin10"
+            android:layout_marginRight="@dimen/margin10"
+            android:layout_marginBottom="@dimen/margin2"
+            android:textSize="@dimen/size14"
+            android:fontFamily="serif"
+            android:textColor="@color/colorWhite"
+            />
+
+        <ImageView
+            android:id="@+id/item_cab_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:contentDescription="@string/cab_desc"
+            android:layout_marginLeft="@dimen/margin5"
+            android:layout_marginRight="@dimen/margin5"
+            android:layout_marginTop="@dimen/margin2"
+            android:layout_marginBottom="@dimen/margin2"
+            android:src="@drawable/taxi"
+            android:scaleType="fitCenter"
+            android:padding="@dimen/padding10"
+            android:layout_gravity="center"
+            android:background="@drawable/background_cab_colored"/>
+
+        <TextView
+            android:id="@+id/item_cab_price"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/margin2"
+            android:layout_marginLeft="@dimen/margin10"
+            android:layout_marginRight="@dimen/margin10"
+            android:textSize="@dimen/size14"
+            android:fontFamily="serif"
+            android:textColor="@color/colorBlack"
+            />
+
+        <TextView
+            android:id="@+id/item_cab_distance"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/margin2"
+            android:layout_marginLeft="@dimen/margin10"
+            android:layout_marginRight="@dimen/margin10"
+            android:layout_marginBottom="@dimen/margin5"
+            android:textSize="@dimen/size14"
+            android:fontFamily="serif"
+            android:textColor="@color/colorBlack"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/overlay_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorUnselected"
+        android:visibility="visible"
+        />
+
+</RelativeLayout>

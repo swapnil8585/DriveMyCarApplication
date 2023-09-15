@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/colorWorking"/>
+        </shape>
+    </item>
+
+    <item
+        android:top="@dimen/margin20"
+        android:left="@dimen/margin20"
+        android:right="@dimen/margin20"
+        android:bottom="@dimen/margin20"
+        >
+        <bitmap
+            android:tint="@color/colorBlack"
+            android:src="@drawable/ic_icon_tick" />
+    </item>
+</layer-list>

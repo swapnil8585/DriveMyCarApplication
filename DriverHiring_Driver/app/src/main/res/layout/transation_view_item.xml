@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/colorSteelBlue"
+    android:padding="5dp"
+    >
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Doctor Name"
+            android:textSize="21sp"
+            android:padding="6dp"
+            android:fontFamily="serif"
+            android:textColor="@color/colorWhite"
+            />
+
+
+        <TextView
+            android:id="@+id/tPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:text="Price"
+            android:padding="6dp"
+            android:textColor="@color/colorWhite"
+            />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/tStatus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:textSize="19sp"
+        android:text="Status"
+        android:padding="6dp"
+        android:fontFamily="serif"
+        android:textColor="@color/colorWhite"
+        android:layout_alignParentRight="true"
+        />
+
+</RelativeLayout>

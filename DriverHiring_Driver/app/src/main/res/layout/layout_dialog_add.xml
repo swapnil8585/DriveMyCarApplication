@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorGreen"
+            android:gravity="center"
+            android:padding="@dimen/padding10"
+            android:text="Experience"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/size21" />
+
+        <ListView
+            android:id="@+id/add_dia_list"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginStart="@dimen/margin10"
+            android:layout_marginTop="@dimen/margin10"
+            android:layout_marginEnd="@dimen/margin10"
+            android:scrollbars="none"
+            />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin10"
+            android:layout_marginTop="@dimen/margin10"
+            android:layout_marginEnd="@dimen/margin10"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding5">
+
+            <Spinner
+                android:id="@+id/add_dia_type"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/edit_background"
+                android:entries="@array/car_type"
+                android:padding="@dimen/padding10" />
+
+            <EditText
+                android:id="@+id/add_dia_exp"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/margin10"
+                android:gravity="center"
+                android:inputType="number"
+                android:textColor="@color/colorBlack" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/add_dia_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin5"
+                android:layout_marginEnd="@dimen/margin5"
+                android:layout_marginBottom="@dimen/margin4"
+                android:background="@color/colorGreen"
+                android:textColor="@color/colorWhite"
+                app:fabSize="mini"
+                app:srcCompat="@drawable/ic_icon_add" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin10"
+            android:layout_marginTop="@dimen/margin10"
+            android:layout_marginEnd="@dimen/margin10"
+            android:layout_marginBottom="@dimen/margin10"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding5">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/add_dia_positive"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorGreen"
+                android:text="Submit"
+                android:textColor="@color/colorWhite" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/add_dia_negative"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/margin10"
+                android:layout_weight="1"
+                android:background="@color/colorWhite"
+                android:text="Cancel"
+                android:textColor="@color/colorGreen" />
+
+        </TableRow>
+
+    </LinearLayout>
+
+</RelativeLayout>
